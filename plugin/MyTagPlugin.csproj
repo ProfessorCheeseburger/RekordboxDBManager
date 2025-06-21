@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputType>Library</OutputType>
+    <OutputPath>..\build\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="MusicBeeInterface">
+      <HintPath>lib\MusicBeeInterface.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Python.Runtime">
+      <HintPath>lib\Python.Runtime.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="MyTagPlugin.cs" />
+    <Compile Include="MyTagPanel.cs" />
+    <Compile Include="PythonInterop.cs" />
+  </ItemGroup>
+</Project>
