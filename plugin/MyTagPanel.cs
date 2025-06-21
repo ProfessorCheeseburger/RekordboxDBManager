@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace MyTagPlugin
+namespace MusicBeePlugin
 {
     public class MyTagPanel : UserControl
     {

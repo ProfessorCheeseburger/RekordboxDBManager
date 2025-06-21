@@ -19,8 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="MyTagPlugin.cs" />
-    <Compile Include="MyTagPanel.cs" />
-    <Compile Include="PythonInterop.cs" />
-  </ItemGroup>
+  <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+</ItemGroup>
 </Project>

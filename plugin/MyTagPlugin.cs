@@ -1,26 +1,25 @@
 using System;
-using MusicBeePlugin; 
 using System.Windows.Forms;
 
-namespace MyTagPlugin
+namespace MusicBeePlugin
 {
-    public class Plugin : MusicBeePluginInterface
+    public partial class Plugin
     {
-        private PluginInfo about = new PluginInfo();
+        private PluginInfo about;
         private MusicBeeApiInterface mbApi;
 
+                
         public PluginInfo Initialise(IntPtr apiInterfacePtr)
         {
-            mbApi = new MusicBeeApiInterface();
-            mbApi.Initialise(apiInterfacePtr);
-
-            about.PluginInfoVersion = PluginInfoVersion;
-            about.Name = "Rekordbox MyTag Viewer";
-            about.Description = "Shows My Tags from Rekordbox for matching files";
-            about.Author = "You & ChatGPT 😎";
-            about.VersionMajor = 1;
-            about.VersionMinor = 0;
-
+            about = new PluginInfo
+            {
+                PluginInfoVersion = 1,
+                Name = "Rekordbox MyTag Viewer",
+                Description = "Shows My Tags from Rekordbox for matching files",
+                Author = "You & ChatGPT 😎",
+                VersionMajor = 1,
+                VersionMinor = 0
+            };
             PythonInterop.InitializePython();
 
             return about;

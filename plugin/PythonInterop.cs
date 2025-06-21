@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using Python.Runtime;
 
-namespace MyTagPlugin
+namespace MusicBeePlugin
 {
     public static class PythonInterop
     {
